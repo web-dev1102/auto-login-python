@@ -170,8 +170,8 @@ if __name__ == '__main__':
     proxy_extension = ProxyExtension(*proxy)
 
     options = uc.ChromeOptions()
-    # options.headless = True
-    # options.add_argument('--headless')
+    options.headless = True
+    options.add_argument('--headless')
     options.add_argument(f"--load-extension={proxy_extension.directory}")
 
     try:
